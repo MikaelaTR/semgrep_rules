@@ -1,0 +1,36 @@
+rules:
+  - id: Possible-Race-Condition
+    metadata:
+      author: Victor 4ernyak <https://t.me/iter_malum>
+      confidence: MEDIUM
+      category: security
+      cwe:
+        - "CWE-366: Race Condition within a Thread"
+      vulnerability_class:
+        - Memory Issues
+      references:
+        - https://cwe.mitre.org/data/definitions/366.html
+    languages:
+      - c
+      - c++
+    files:
+      - and:
+          extensions:
+            - .cxx
+            - .hxx
+            - .ctl
+            - .xml
+            - .pnl
+    severity: HIGH
+    message: >
+      If two threads of execution use a resource simultaneously, there exists the possibility that resources may be used while invalid, in turn making the state of execution undefined.
+    pattern-either:
+      - patterns:
+          - pattern: |
+              pthread_t $VAR;
+      - patterns:
+          - pattern: |
+              std::thread $VAR;
+      - patterns:
+          - pattern: |
+              std::thread $VAR($VAR2);
