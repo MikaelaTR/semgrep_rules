@@ -5,7 +5,8 @@ rules:
       confidence: MEDIUM
       category: security
       cwe:
-        - "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        - "CWE-78: Improper Neutralization of Special Elements used in an OS
+          Command ('OS Command Injection')"
       vulnerability_class:
         - Memory Issues
       references:
@@ -13,66 +14,105 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
     severity: HIGH
-    message: >
+    message: |
+      
       The product constructs all or part of an OS command using
       externally-influenced input from an upstream component, but it does not
       neutralize or incorrectly neutralizes special elements that could modify
       the intended OS command when it is sent to a downstream component.
-    patterns:
-      - pattern: $FUNC($VAR, ...)
-      - pattern-not-inside: |
-          strcat(...,"$LITERAL");
-          ...
-          $FUNC($VAR, ...);
-      - pattern-not-inside: |
-          wcscat(...,"$LITERAL");
-          ...
-          $FUNC($VAR, ...);
-      - pattern-not-inside: |
-          if ($E){
-          ...
-          strcat(...,"$LITERAL");
-          ...
-          }
-          ...
-          $FUNC($VAR, ...);
-      - pattern-not-inside: |
-          if ($E){...}
-          else 
-          {
-          ...
-          strcat(...,"$LITERAL");
-          ...
-          }
-          ...
-          $FUNC($VAR, ...);
-      - pattern-not-inside: |
-          if ($E){
-          ...
-          wcscat(...,"$LITERAL");
-          ...
-          }
-          ...
-          $FUNC($VAR, ...);
-      - pattern-not-inside: |
-          if ($E){...}
-          else 
-          {
-          ...
-          wcscat(...,"$LITERAL");
-          ...
-          }
-          ...
-          $FUNC($VAR, ...);
-      - metavariable-regex:
-          metavariable: $FUNC
-          regex: (EXECL$|POPEN$|EXECV$|_spawnl$|_wspawnl$|EXECLP$|_wexeclp$|SYSTEM$|.*action$|action$|_wspawnvp$|execle$|execvp$|fork$|posix_spawn$|CreateProcess$|ShellExecute$|popen$|execvpe$)
+    pattern-either:
+      - patterns:
+          - pattern: $FUNC(...,$VAR, ...)
+          - pattern-not: $FUNC(...,"$LITERAL", ...)
+          - pattern-not-inside: |
+              
+              strcat(...,"$LITERAL");
+
+              ...
+
+              $FUNC($VAR, ...);
+          - pattern-not-inside: |
+              
+              wcscat(...,"$LITERAL");
+
+              ...
+
+              $FUNC($VAR, ...);
+          - pattern-not-inside: |
+              
+              if ($E){
+
+              ...
+
+              strcat(...,"$LITERAL");
+
+              ...
+
+              }
+
+              ...
+
+              $FUNC($VAR, ...);
+          - pattern-not-inside: |
+              
+              if ($E){...}
+
+              else 
+
+              {
+
+              ...
+
+              strcat(...,"$LITERAL");
+
+              ...
+
+              }
+
+              ...
+
+              $FUNC($VAR, ...);
+          - pattern-not-inside: |
+              
+              if ($E){
+
+              ...
+
+              wcscat(...,"$LITERAL");
+
+              ...
+
+              }
+
+              ...
+
+              $FUNC($VAR, ...);
+          - pattern-not-inside: |
+              
+              if ($E){...}
+
+              else 
+
+              {
+
+              ...
+
+              wcscat(...,"$LITERAL");
+
+              ...
+
+              }
+
+              ...
+
+              $FUNC($VAR, ...);
+          - metavariable-regex:
+              metavariable: $FUNC
+              regex: (EXECL$|POPEN$|EXECV$|_spawnl$|_wspawnl$|EXECLP$|_wexeclp$|SYSTEM$|.*action$|action$|_wspawnvp$|execle$|execvp$|fork$|posix_spawn$|CreateProcess$|ShellExecute$|popen$|execvpe$|system$)
+      - patterns:
+          - pattern: $VAR = $FUNC(...,$VAR,...)
+          - pattern-not: $VAR = $FUNC(... + "$LITERAL" + ...)
+          - metavariable-regex:
+              metavariable: $FUNC
+              regex: (EXECL$|POPEN$|EXECV$|_spawnl$|_wspawnl$|EXECLP$|_wexeclp$|SYSTEM$|.*action$|action$|_wspawnvp$|execle$|execvp$|fork$|posix_spawn$|CreateProcess$|ShellExecute$|popen$|execvpe$)
