@@ -5,7 +5,7 @@ rules:
       references:
         - https://cwe.mitre.org/data/definitions/121
         - https://github.com/googleprojectzero/weggli
-      confidence: MEDIUM
+      confidence: LOW
       # NOTE: some functions (e.g., scanf family) and some other ways to
       # write into a stack buffer are not covered.
       # NOTE: static variables matching apparently is not supported by Semgrep.

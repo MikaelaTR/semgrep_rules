@@ -3,11 +3,11 @@ rules:
     message: The size parameter to `snprintf` is derived from the source data, not
       the destination buffer. This may trigger a buffer overflow and memory
       corruption if `$SRC` is larger than `$DEST`.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

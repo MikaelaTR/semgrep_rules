@@ -7,12 +7,12 @@ rules:
         - https://cwe.mitre.org/data/definitions/120
         - https://cwe.mitre.org/data/definitions/787
         - https://g.co/kgs/PCHQjJ
-      confidence: HIGH
+      confidence: LOW
     message: >-
       A buffer overflow condition exists when a program attempts to put
       more data in a buffer than it can hold, or when a program attempts to
       put data in a memory area outside of the boundaries of a buffer.
-    severity: ERROR
+    severity: INFO
     languages:
       - c
       - cpp

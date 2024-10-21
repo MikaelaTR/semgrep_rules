@@ -30,7 +30,7 @@ rules:
     languages:
       - c
       - c++
-    severity: LOW
+    severity: INFO
     pattern-either:
       # format string in 1st arg
       - patterns:

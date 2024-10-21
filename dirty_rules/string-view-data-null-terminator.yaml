@@ -3,11 +3,11 @@ rules:
     message: The string returned from `std::string_view.data()` is not guaranteed to
       be NULL terminated. This expression expects a NULL terminated string and
       will trigger an out-of-bounds read.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

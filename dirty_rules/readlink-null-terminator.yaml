@@ -2,11 +2,11 @@ rules:
   - id: readlink-null-terminator
     message: "`readlink` does not NULL terminate the output buffer. This expression
       expects a NULL terminated string and will trigger an out-of-bounds read."
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

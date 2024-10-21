@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: ERROR
     message: >
       The product dereferences a pointer that it expects to be valid but is NULL.
     pattern-either:

@@ -5,7 +5,7 @@ rules:
       references:
         - https://legends2k.github.io/note/assert_vs_if/
         - https://github.com/struct/mms
-      confidence: MEDIUM
+      confidence: LOW
       # NOTE: other kinds of assertion macros (e.g., REQUIRE, DCHECK,
       # ENSURE, etc.) are not covered.
     message: >-
@@ -13,7 +13,7 @@ rules:
       non-debug builds. If assertions are the only line of defense against
       untrusted input, the software may be exposed to attacks that leverage
       the lack of proper input checks.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

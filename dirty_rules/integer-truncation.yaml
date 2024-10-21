@@ -7,7 +7,7 @@ rules:
         - https://cwe.mitre.org/data/definitions/681
         - https://g.co/kgs/PCHQjJ
         - https://github.com/struct/mms
-      confidence: MEDIUM
+      confidence: LOW
       # NOTE: the deep expression operator is necessary to catch some
       # matches because C/C++ integer promotions do not seem entirely
       # supported by Semgrep; this may generate false positives.
@@ -17,7 +17,7 @@ rules:
       Truncation errors occur when a primitive is cast to a primitive of a 
       smaller size and data is lost in the conversion. The value cannot be 
       trusted and the application will be in an undefined state.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

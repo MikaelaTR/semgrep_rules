@@ -7,13 +7,13 @@ rules:
         - https://cwe.mitre.org/data/definitions/1325
         - https://nullprogram.com/blog/2019/10/28/
         - https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples
-      confidence: HIGH
+      confidence: LOW
     message: >-
       Use of alloca() is unsafe because it cannot ensure that the pointer 
       returned points to a valid and usable block of memory. The allocation 
       made may exceed the bounds of the stack, or even go further into other 
       objects in memory, and alloca() cannot determine such an error.
-    severity: ERROR
+    severity: INFO
     languages:
       - c
       - cpp

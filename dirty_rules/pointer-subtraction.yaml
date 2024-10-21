@@ -5,12 +5,12 @@ rules:
       references:
         - https://cwe.mitre.org/data/definitions/469
         - https://github.com/struct/mms
-      confidence: MEDIUM
+      confidence: LOW
     message: >-
       The software subtracts one pointer from another in order to determine
       size, but this calculation can be incorrect if the pointers do not
       exist in the same memory chunk.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

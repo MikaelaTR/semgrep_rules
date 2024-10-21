@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: ERROR
     message: >
       The product allocates memory based on an untrusted, large size value, but
       it does not ensure that the size is within expected limits, allowing

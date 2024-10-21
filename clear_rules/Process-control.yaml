@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: WARNING
     message: >
       Executing commands or loading libraries from an untrusted source or in an
       untrusted environment can cause an application to execute malicious

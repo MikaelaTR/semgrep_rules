@@ -5,11 +5,11 @@ rules:
       references:
         - https://cwe.mitre.org/data/definitions/377
         - https://cwe.mitre.org/data/definitions/367
-      confidence: HIGH
+      confidence: LOW
     message: >-
       Creating and using insecure temporary files can leave application and
       system data vulnerable to attack.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

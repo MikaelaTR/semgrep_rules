@@ -6,7 +6,7 @@ rules:
         - https://cwe.mitre.org/data/definitions/190
         - https://cwe.mitre.org/data/definitions/680
         - https://github.com/struct/mms
-      confidence: MEDIUM
+      confidence: LOW
     message: >-
       The software performs a calculation that can produce an integer
       overflow or wraparound, when the logic assumes that the resulting
@@ -14,7 +14,7 @@ rules:
       introduce other weaknesses when the calculation is used for resource
       management or execution control. When influenced by the size of an 
       input it is often easier to overflow a short than an int.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

@@ -5,12 +5,12 @@ rules:
       references:
         - https://cwe.mitre.org/data/definitions/252
         - https://codeql.github.com/codeql-query-help/cpp/cpp-missing-check-scanf/
-      confidence: MEDIUM
+      confidence: LOW
     message: >-
       The software does not check the return value from a method or
       function, which can prevent it from detecting unexpected states and
       conditions.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

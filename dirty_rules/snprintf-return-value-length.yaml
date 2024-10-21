@@ -3,11 +3,11 @@ rules:
     message: The return value of `snprintf` is the number of characters that would
       be written, excluding the NUL terminator. The return value must be
       validated before using it as a buffer index or buffer length.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

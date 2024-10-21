@@ -6,7 +6,7 @@ rules:
         - https://lwn.net/Articles/507319/
         - https://g.co/kgs/PCHQjJ
         - https://dustri.org/b/playing-with-weggli.html
-      confidence: MEDIUM
+      confidence: LOW
       # NOTE: see also cpp.strings.snprintf-return-value-length.snprintf-return-value-length.
     message: >-
       The snprintf() and vsnprintf() functions return the total length of
@@ -14,7 +14,7 @@ rules:
       larger than the size of the destination buffer. If it is used
       unsafely, e.g. as an index to write to the destination buffer, memory
       corruption might occur.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

@@ -56,4 +56,4 @@ rules:
     languages:
       - c
       - c++
-    severity: WARNING
+    severity: INFO

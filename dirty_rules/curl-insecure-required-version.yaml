@@ -3,11 +3,11 @@ rules:
     message: Detected use of an insecure SSL/TLS algorithm. This could allow an
       attacker to peform a man-in-the-middle-attack. Applications should prefer
       a secure algorithm such as TLS 1.2 or 1.3.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

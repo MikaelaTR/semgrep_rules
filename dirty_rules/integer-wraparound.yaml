@@ -28,7 +28,7 @@ rules:
       value will always be larger than the original value. This can
       introduce other weaknesses when the calculation is used for resource
       management or execution control.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

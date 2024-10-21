@@ -3,11 +3,11 @@ rules:
     message: Externally controlled data influences the size of an allocation. This
       can usually lead to overflow or underflow and later trigger an out of
       bounds conditions.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       interfile: true
       category: security
       subcategory:

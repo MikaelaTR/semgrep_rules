@@ -23,28 +23,9 @@ rules:
         - https://cwe.mitre.org/data/definitions/23.html
 
     languages:
-
       - c
-
       - c++
-
-    files:
-
-      - and:
-
-          extensions:
-
-            - .cxx
-
-            - .hxx
-
-            - .ctl
-
-            - .xml
-
-            - .pnl
-
-    severity: HIGH
+    severity: WARNING
     message: >
       The product uses external input to construct a pathname that should be
       within a restricted directory, but it does not properly neutralize

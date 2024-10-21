@@ -3,11 +3,11 @@ rules:
     message: TLS ceritificate validation is disabled. This could lead to a potential
       man-in-the-middle attack. This may be used for testing purposes but it is
       not considered safe in production deployments.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: MEDIUM
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

@@ -3,11 +3,11 @@ rules:
     message: The preceding call to `$SOURCE` can return a negative value when an
       error is encountered. This can lead to an out-of-bounds array access and
       possible memory corruption.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

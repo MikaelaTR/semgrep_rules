@@ -2,7 +2,7 @@ rules:
   - id: double-free
     metadata:
       author: Victor 4ernyak <https://t.me/iter_malum>
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       cwe:
         - "CWE-415: Double Free"
@@ -30,7 +30,7 @@ rules:
     languages:
       - c
       - c++
-    severity: ERROR
+    severity: INFO
     pattern-either:
     - patterns:
       - pattern: |

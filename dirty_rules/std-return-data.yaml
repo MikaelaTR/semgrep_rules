@@ -3,11 +3,11 @@ rules:
     message: "`$FUNC` returns a pointer to the memory owned by `$VAR`. This pointer
       is invalid after `$VAR` goes out of scope, which can trigger a use after
       free."
-    severity: ERROR
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

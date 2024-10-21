@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: WARNING
     message: >
       The product uses a function that accepts a format string as an argument,
       but the format string originates from an external source. When an attacker

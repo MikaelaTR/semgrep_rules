@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: WARNING
     message: >-
       One or more system settings or configuration elements can be externally controlled by a user. This vulnerability arises when the program sets system or configuration properties using inputs from external sources without proper validation. The lack of validation can lead to unauthorized control over system settings or configurations, potentially resulting in security breaches, data corruption, or loss of system integrity. Programs should sanitize and validate inputs before using them to modify system or configuration settings to mitigate this risk.
     patterns:

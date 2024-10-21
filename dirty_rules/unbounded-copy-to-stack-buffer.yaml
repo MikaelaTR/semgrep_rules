@@ -3,11 +3,11 @@ rules:
     message: The function `$FUN` does not impose any size limitation to what it
       writes to `$BUF`. That may lead to a stack buffer overflow if there is no
       validation on the size of the input.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

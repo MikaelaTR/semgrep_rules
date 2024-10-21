@@ -13,15 +13,7 @@ rules:
     languages:
       - c
       - c++
-    files:
-      - and:
-          extensions:
-            - .cxx
-            - .hxx
-            - .ctl
-            - .xml
-            - .pnl
-    severity: HIGH
+    severity: ERROR
     message: >
       The product reuses or references memory after it has been freed. At some
       point afterward, the memory may be allocated again and saved in another

@@ -4,11 +4,11 @@ rules:
       an attacker to leak information from memory or trigger memory corruption.
       Format strings should be constant strings to prevent these issues. If you
       need to print a user-controlled string then you can use `%s`.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: MEDIUM
       impact: MEDIUM
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

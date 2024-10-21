@@ -5,7 +5,7 @@ rules:
       references:
         - https://lwn.net/Articles/507319/
         - https://g.co/kgs/PCHQjJ
-      confidence: MEDIUM
+      confidence: LOW
     message: >-
       The strlcpy() and strlcat() functions return the total length of the
       string they tried to create. For strlcpy() that means the length of
@@ -14,7 +14,7 @@ rules:
       Therefore, this return value can be larger than the size of the
       destination buffer. If it is used unsafely, e.g. as an index to write
       to the destination buffer, memory corruption might occur.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

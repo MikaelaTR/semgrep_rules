@@ -2,7 +2,7 @@ rules:
   - id: use-after-free
     metadata:
       author: Victor 4ernyak <https://t.me/iter_malum>
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       cwe:
         - "CWE-416: Use After Free"
@@ -17,7 +17,7 @@ rules:
     languages:
       - c
       - c++
-    severity: ERROR
+    severity: INFO
     message: >- 
        UAF bugs occur when a program continues to access a memory location after the memory has been freed or deallocated.
        This can lead to unexpected behavior, crashes or even security vulnerabilities such as remote code execution or privilege escalation.

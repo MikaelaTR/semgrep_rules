@@ -4,7 +4,7 @@ rules:
       terminator. This can lead to an out-of-bounds read and information
       disclosure. One extra byte should be added to the length to ensure that
       the NUL terminator is copied.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH

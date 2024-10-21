@@ -2,11 +2,11 @@ rules:
   - id: std-vector-invalidation
     message: Modifying an `std::vector` while iterating over it could cause the
       container to reallocate, triggering memory corruption.
-    severity: ERROR
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

@@ -14,7 +14,7 @@ rules:
     languages:
       - c
       - c++
-    severity: HIGH
+    severity: ERROR
     message: |
       
       The product constructs all or part of an OS command using

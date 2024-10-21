@@ -3,11 +3,11 @@ rules:
     message: This call makes a world-writable file which allows any user on a
       machine to write to the file. This may allow attackers to influence the
       behaviour of this process by writing to the file.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: MEDIUM
       impact: MEDIUM
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

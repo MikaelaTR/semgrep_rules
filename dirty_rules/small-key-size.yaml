@@ -2,11 +2,11 @@ rules:
   - id: small-key-size
     message: "`$KEY_FUNCTION` is using a key size of only $KEY_BITS bits. This is
       less than the recommended key size of 2048 bits."
-    severity: ERROR
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: MEDIUM
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

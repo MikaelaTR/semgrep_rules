@@ -2,11 +2,11 @@ rules:
   - id: sizeof-this
     message: Do not use `sizeof(this)` to get the number of bytes of the object in
       memory. It returns the size of the pointer, not the size of the object.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: LOW
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

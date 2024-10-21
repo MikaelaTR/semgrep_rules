@@ -14,7 +14,7 @@ rules:
     languages:
       - c
       - c++
-    severity: WARNING
+    severity: INFO
     metadata:
       author: Victor 4ernyak <https://t.me/iter_malum>
       cwe:

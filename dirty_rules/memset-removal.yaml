@@ -9,7 +9,7 @@ rules:
     metadata:
       likelihood: LOW
       impact: LOW
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

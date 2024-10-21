@@ -33,7 +33,7 @@ rules:
       the precursor to buffer underwrite conditions. Buffer underwrites 
       occur frequently when large unsigned values are cast to signed values, 
       and then used as indexes into a buffer or for pointer arithmetic.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

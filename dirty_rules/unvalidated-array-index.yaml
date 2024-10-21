@@ -3,11 +3,11 @@ rules:
     message: Externally controlled data is used to index a fixed-size array,
       `$BUFFER`. This could lead to an out-of-bounds read or write, triggering
       memory corruption.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln

@@ -11,7 +11,7 @@ rules:
       category: security
       technology:
         - c
-      confidence: MEDIUM
+      confidence: LOW
       subcategory:
         - audit
       likelihood: LOW
@@ -21,4 +21,4 @@ rules:
         - Dangerous Method or Function
     languages:
       - c
-    severity: ERROR
+    severity: INFO

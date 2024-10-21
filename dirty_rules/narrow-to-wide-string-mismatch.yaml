@@ -2,11 +2,11 @@ rules:
   - id: narrow-to-wide-string-mismatch
     message: A byte-string (narrow string) is used in an API that expects a
       wide-string. This can trigger an out-of-bounds read.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

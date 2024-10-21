@@ -5,7 +5,7 @@ rules:
       references:
         - https://rules.sonarsource.com/c/type/Bug/RSPEC-989
         - https://wiki.sei.cmu.edu/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number
-      confidence: HIGH
+      confidence: LOW
       # NOTE: some function variants are missing.
     message: >-
       The atoi(), atol(), atof(), and similar functions don't handle errors.

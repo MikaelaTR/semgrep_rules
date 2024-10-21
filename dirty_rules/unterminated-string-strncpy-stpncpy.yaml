@@ -7,7 +7,7 @@ rules:
         - https://cwe.mitre.org/data/definitions/126
         - https://g.co/kgs/PCHQjJ
         - https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf
-      confidence: MEDIUM
+      confidence: LOW
     # NOTE: other functions that do not NUL-terminate the destination
     # buffer are not covered (e.g., read(), readlink(), fread(), 
     # memcpy(), etc.).
@@ -17,7 +17,7 @@ rules:
       buffer. If the program does not explicitly terminate the destination
       buffer, this will almost certainly result in information disclosure,
       and possibly a buffer overflow condition.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

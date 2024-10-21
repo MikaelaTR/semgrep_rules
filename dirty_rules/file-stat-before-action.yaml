@@ -3,11 +3,11 @@ rules:
     message: A check is done with `stat` and then the file is used. There is no
       guarantee that the status of the file has not changed since the call to
       `stat` which may allow attackers to bypass permission checks.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: MEDIUM
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

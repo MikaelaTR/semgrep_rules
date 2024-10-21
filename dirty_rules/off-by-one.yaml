@@ -7,7 +7,7 @@ rules:
         - https://cwe.mitre.org/data/definitions/787
         - https://g.co/kgs/PCHQjJ
         - https://github.com/struct/mms
-      confidence: MEDIUM
+      confidence: LOW
       # NOTE: heap-allocated buffers and some functions are not covered.
       # NOTE: memcpy(dst + 1, p, len) and similar scenarios are not covered.
       # NOTE: pattern {$len=snprintf(_); malloc($len);} is not covered.
@@ -16,7 +16,7 @@ rules:
     message: >-
       The software calculates or uses an incorrect maximum or minimum value
       that is 1 more, or 1 less, than the correct value.
-    severity: WARNING
+    severity: INFO
     languages:
       - c
       - cpp

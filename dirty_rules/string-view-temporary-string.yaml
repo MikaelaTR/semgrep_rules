@@ -4,11 +4,11 @@ rules:
       The `std::string` value is immeadiately destroyed after assignment and
       accessing data through the `std::string_view` will trigger a
       use-after-free.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: HIGH
-      confidence: HIGH
+      confidence: LOW
       category: security
       subcategory:
         - vuln

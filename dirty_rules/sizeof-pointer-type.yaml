@@ -3,11 +3,11 @@ rules:
     message: Using `sizeof(...)` on a pointer type is error prone and can lead to
       memory corruption if the incorrect size is used to allocate memory. An
       explicit length should be used instead of using `sizeof(...)`.
-    severity: WARNING
+    severity: INFO
     metadata:
       likelihood: LOW
       impact: LOW
-      confidence: MEDIUM
+      confidence: LOW
       category: security
       subcategory:
         - vuln
